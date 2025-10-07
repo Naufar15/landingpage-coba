@@ -3,6 +3,8 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+// Perbaikan: Import komponen Image dari Next.js untuk optimasi.
+import Image from "next/image";
 
 export default function Home() {
   useEffect(() => {
@@ -43,11 +45,17 @@ export default function Home() {
         </p>
 
         <div className="mt-12 flex justify-center">
-          <img
-            src="/cinemora.png"
-            alt="Perbandingan Grafik"
-            className="rounded-2xl shadow-2xl max-w-4xl w-full"
-          />
+          <div className="rounded-2xl shadow-2xl max-w-4xl w-full">
+            {/* Perbaikan: Menggunakan komponen Image dan menambahkan width/height */}
+            <Image
+              src="/cinemora.png"
+              alt="Perbandingan Grafik"
+              width={1024} // Sesuaikan dengan ukuran gambar asli jika diketahui
+              height={576} // Sesuaikan dengan ukuran gambar asli jika diketahui
+              className="rounded-2xl shadow-2xl w-full h-auto"
+              priority // Tambahkan priority karena ini gambar utama di bagian atas
+            />
+          </div>
         </div>
       </section>
 
@@ -68,10 +76,13 @@ export default function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
           <div className="bg-gray-800 rounded-2xl p-6 hover:scale-105 transition-transform">
-            <img
-              src="VERDANCE 5.png"
+            {/* Perbaikan: Menggunakan komponen Image */}
+            <Image
+              src="/VERDANCE 5.png"
               alt="Preset ReShade"
-              className="rounded-lg mb-4"
+              width={400} // Perkiraan ukuran
+              height={225} // Perkiraan ukuran
+              className="rounded-lg mb-4 w-full h-auto"
             />
             <h3 className="text-xl font-bold mb-2">Preset ReShade</h3>
             <p className="text-gray-400">
@@ -81,10 +92,13 @@ export default function Home() {
           </div>
 
           <div className="bg-gray-800 rounded-2xl p-6 hover:scale-105 transition-transform">
-            <img
-              src="nanoboost 2.png"
+            {/* Perbaikan: Menggunakan komponen Image */}
+            <Image
+              src="/nanoboost 2.png"
               alt="Graphic Pack"
-              className="rounded-lg mb-4"
+              width={400} // Perkiraan ukuran
+              height={225} // Perkiraan ukuran
+              className="rounded-lg mb-4 w-full h-auto"
             />
             <h3 className="text-xl font-bold mb-2">Graphic Pack</h3>
             <p className="text-gray-400">
@@ -94,10 +108,13 @@ export default function Home() {
           </div>
 
           <div className="bg-gray-800 rounded-2xl p-6 hover:scale-105 transition-transform">
-            <img
-              src="NANOPACK 1.PNG"
+            {/* Perbaikan: Menggunakan komponen Image. Pastikan huruf kapital sesuai nama file. */}
+            <Image
+              src="/NANOPACK 1.PNG"
               alt="Mod Pack"
-              className="rounded-lg mb-4"
+              width={400} // Perkiraan ukuran
+              height={225} // Perkiraan ukuran
+              className="rounded-lg mb-4 w-full h-auto"
             />
             <h3 className="text-xl font-bold mb-2">Mod Pack Lengkap</h3>
             <p className="text-gray-400">
@@ -131,7 +148,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 4 */}
+      {/* SECTION 4 - Perbaikan Tanda Kutip Ganda */}
       <section
         className="py-20 bg-gradient-to-t from-gray-900 to-black text-center px-6"
         data-aos="fade-up"
@@ -155,10 +172,10 @@ export default function Home() {
         <p className="text-gray-400 max-w-2xl mx-auto mb-8">
           Bayangkan momen-momen terbaik Anda. Saat Anda merekam video roleplay
           untuk diunggah ke YouTube, hasilnya akan terlihat begitu memukau,
-          begitu kaya warna, hingga penonton Anda akan bertanya-tanya, "Ini
-          syuting film, atau game?" Refleksi sinematik dan tone warna yang
-          dramatis memastikan bahwa cerita yang Anda bangun memiliki latar
-          belakang visual yang layak.
+          begitu kaya warna, hingga penonton Anda akan bertanya-tanya,
+          **&quot;Ini syuting film, atau game?&quot;** Refleksi sinematik dan
+          tone warna yang dramatis memastikan bahwa cerita yang Anda bangun
+          memiliki latar belakang visual yang layak.
         </p>
 
         <p className="text-gray-400 max-w-2xl mx-auto mb-8">
@@ -195,7 +212,7 @@ export default function Home() {
         </a>
       </section>
 
-      {/* SECTION 5 */}
+      {/* SECTION 5 - Perbaikan Tanda Kutip Ganda */}
       <section
         className="py-20 bg-gradient-to-t from-gray-900 to-black text-center px-6"
         data-aos="fade-up"
