@@ -246,7 +246,7 @@ export default function Home() {
           rel="noopener noreferrer"
           className="inline-block bg-gradient-to-r from-purple-600 to-indigo-500 text-white font-semibold px-10 py-4 rounded-xl shadow-lg hover:scale-110 transition-all duration-300"
         >
-          💎 Dapatkan Sekarang – Jadikan Dunia Kamu Film Nyata
+          💎 Dapatkan Sekarang Juga !!!
         </a>
       </section>
 
